@@ -6,7 +6,7 @@
 /*   By: slertpim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 22:41:25 by slertpim          #+#    #+#             */
-/*   Updated: 2021/10/22 23:20:57 by slertpim         ###   ########.fr       */
+/*   Updated: 2021/10/22 23:24:59 by ppetchda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putchar(char c);
 
 void	firstline(int y)
 {
-	int a;
+	int	a;
 
 	a = 0;
 	ft_putchar('A');
@@ -34,7 +34,7 @@ void	firstline(int y)
 
 void	lastline(int z)
 {
-	int a;
+	int	a;
 
 	a = 0;
 	ft_putchar('C');
@@ -52,8 +52,8 @@ void	lastline(int z)
 
 void	body(int g, int k)
 {
-	int a;
-	int b;
+	int	a;
+	int	b;
 
 	b = 0;
 	while (b < k - 2)
@@ -77,7 +77,7 @@ void	body(int g, int k)
 void	rush(int i, int j)
 {
 	firstline(i);
-	body(i,j);
+	body(i, j);
 	if (j > 1)
 	{
 		lastline(i);
