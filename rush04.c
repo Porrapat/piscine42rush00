@@ -6,7 +6,7 @@
 /*   By: slertpim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 22:41:25 by slertpim          #+#    #+#             */
-/*   Updated: 2021/10/23 00:37:19 by slertpim         ###   ########.fr       */
+/*   Updated: 2021/10/23 00:54:01 by slertpim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,45 +14,45 @@
 
 void	ft_putchar(char c);
 
-void	line(int y, char r, char u, char e)
+void	line(int col, char first, char mid, char last)
 {
-	int	a;
+	int	i;
 
-	a = 0;
-	ft_putchar(r);
-	while (a < y - 2)
+	i = 0;
+	ft_putchar(first);
+	while (i < col - 2)
 	{
-		ft_putchar(u);
-		a++;
+		ft_putchar(mid);
+		i++;
 	}
-	if (y > 1)
+	if (col > 1)
 	{
-		ft_putchar(e);
+		ft_putchar(last);
 	}
 	ft_putchar('\n');
 }
 
-void	body(int g, int k, char p)
+void	body(int col, int row, char mid)
 {
-	int	b;
+	int	j;
 
-	b = 0;
-	while (b < k - 2)
+	j = 0;
+	while (j < row - 2)
 	{
-		line(g, p, ' ', p);
-		b++;
+		line(col, mid, ' ', mid);
+		j++;
 	}
 }
 
-void	rush(int i, int j)
+void	rush(int col, int row)
 {
-	if (i > 0 && j > 0)
+	if (col > 0 && row > 0)
 	{
-		line(i, 'A', 'B', 'C');
-		body(i, j, 'B');
-		if (j > 1)
+		line(col, 'A', 'B', 'C');
+		body(col, row, 'B');
+		if (row > 1)
 		{
-			line(i, 'C', 'B', 'A');
+			line(col, 'C', 'B', 'A');
 		}
 	}
 }
