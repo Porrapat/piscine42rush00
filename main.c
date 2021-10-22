@@ -6,12 +6,12 @@
 /*   By: slertpim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 22:34:33 by slertpim          #+#    #+#             */
-/*   Updated: 2021/10/23 01:01:31 by slertpim         ###   ########.fr       */
+/*   Updated: 2021/10/23 01:28:15 by slertpim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
-void	rush(int i, int j);
+void	rush(int column, int row);
 
 int	main(void)
 {

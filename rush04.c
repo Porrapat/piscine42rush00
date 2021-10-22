@@ -6,7 +6,7 @@
 /*   By: slertpim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 22:41:25 by slertpim          #+#    #+#             */
-/*   Updated: 2021/10/23 00:54:01 by slertpim         ###   ########.fr       */
+/*   Updated: 2021/10/23 01:23:29 by slertpim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,45 +14,54 @@
 
 void	ft_putchar(char c);
 
-void	line(int col, char first, char mid, char last)
+void	line(int column, char left, char middle, char right)
 {
 	int	i;
 
 	i = 0;
-	ft_putchar(first);
-	while (i < col - 2)
+	ft_putchar(left);
+	while (i < column - 2)
 	{
-		ft_putchar(mid);
+		ft_putchar(middle);
 		i++;
 	}
-	if (col > 1)
+	if (column > 1)
 	{
-		ft_putchar(last);
+		ft_putchar(right);
 	}
 	ft_putchar('\n');
 }
 
-void	body(int col, int row, char mid)
+void	body(int column, int row, char vertical_line)
 {
 	int	j;
 
 	j = 0;
 	while (j < row - 2)
 	{
-		line(col, mid, ' ', mid);
+		line(column, vertical_line, ' ', vertical_line);
 		j++;
 	}
 }
 
-void	rush(int col, int row)
+void	rush(int column, int row)
 {
-	if (col > 0 && row > 0)
+	char	top_left;
+	char	top_right;
+	char	bottom_left;
+	char	bottom_right;
+
+	top_left = 'A';
+	top_right = 'C';
+	bottom_left = 'C';
+	bottom_right = 'A';
+	if (column > 0 && row > 0)
 	{
-		line(col, 'A', 'B', 'C');
-		body(col, row, 'B');
+		line(column, top_left, 'B', top_right);
+		body(column, row, 'B');
 		if (row > 1)
 		{
-			line(col, 'C', 'B', 'A');
+			line(column, bottom_left, 'B', bottom_right);
 		}
 	}
 }
