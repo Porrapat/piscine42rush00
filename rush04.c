@@ -6,7 +6,7 @@
 /*   By: slertpim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 22:41:25 by slertpim          #+#    #+#             */
-/*   Updated: 2021/10/22 23:24:59 by ppetchda         ###   ########.fr       */
+/*   Updated: 2021/10/22 23:46:49 by slertpim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,13 @@ void	body(int g, int k)
 
 void	rush(int i, int j)
 {
-	firstline(i);
-	body(i, j);
-	if (j > 1)
+	if (i > 0 && j > 0)
 	{
-		lastline(i);
+		firstline(i);
+		body(i, j);
+		if (j > 1)
+		{
+			lastline(i);
+		}
 	}
 }
