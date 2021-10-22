@@ -6,7 +6,7 @@
 /*   By: slertpim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 22:41:25 by slertpim          #+#    #+#             */
-/*   Updated: 2021/10/22 23:46:49 by slertpim         ###   ########.fr       */
+/*   Updated: 2021/10/23 00:37:19 by slertpim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,62 +14,32 @@
 
 void	ft_putchar(char c);
 
-void	firstline(int y)
+void	line(int y, char r, char u, char e)
 {
 	int	a;
 
 	a = 0;
-	ft_putchar('A');
+	ft_putchar(r);
 	while (a < y - 2)
 	{
-		ft_putchar('B');
+		ft_putchar(u);
 		a++;
 	}
 	if (y > 1)
 	{
-		ft_putchar('C');
+		ft_putchar(e);
 	}
 	ft_putchar('\n');
 }
 
-void	lastline(int z)
+void	body(int g, int k, char p)
 {
-	int	a;
-
-	a = 0;
-	ft_putchar('C');
-	while (a < z - 2)
-	{
-		ft_putchar('B');
-		a++;
-	}
-	if (z > 1)
-	{
-		ft_putchar('A');
-	}
-	ft_putchar('\n');
-}
-
-void	body(int g, int k)
-{
-	int	a;
 	int	b;
 
 	b = 0;
 	while (b < k - 2)
 	{
-		ft_putchar('B');
-		a = 0;
-		while (a < g - 2)
-		{
-			ft_putchar(' ');
-			a++;
-		}
-		if (g > 1)
-		{
-			ft_putchar('B');
-		}
-		ft_putchar('\n');
+		line(g, p, ' ', p);
 		b++;
 	}
 }
@@ -78,11 +48,11 @@ void	rush(int i, int j)
 {
 	if (i > 0 && j > 0)
 	{
-		firstline(i);
-		body(i, j);
+		line(i, 'A', 'B', 'C');
+		body(i, j, 'B');
 		if (j > 1)
 		{
-			lastline(i);
+			line(i, 'C', 'B', 'A');
 		}
 	}
 }
