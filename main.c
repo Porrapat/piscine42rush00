@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+void	ft_putchar(char c);
 void	rush(int i, int j);
 
 int	main(void)
 {
-	rush(5, 5);
+	rush(0, 0);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	rush(7, 7);
 	return (0);
 }
