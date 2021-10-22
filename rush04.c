@@ -6,16 +6,13 @@
 /*   By: slertpim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 22:41:25 by slertpim          #+#    #+#             */
-/*   Updated: 2021/10/22 23:18:54 by slertpim         ###   ########.fr       */
+/*   Updated: 2021/10/22 23:20:57 by slertpim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	firstline(int y)
 {
@@ -85,15 +82,4 @@ void	rush(int i, int j)
 	{
 		lastline(i);
 	}
-}
-
-
-int	main(void)
-{
-	rush(5, 5);
-	rush(5, 1);
-	rush(1, 1);
-	rush(1, 5);
-	rush(4, 4);
-	return (0);
 }
