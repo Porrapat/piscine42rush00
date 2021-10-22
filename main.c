@@ -13,11 +13,8 @@
 void	ft_putchar(char c);
 void	rush(int i, int j);
 
-int	main(void)
+int	main()
 {
-	rush(0, 0);
-	ft_putchar('\n');
-	ft_putchar('\n');
-	rush(7, 7);
+	rush(132, 42);
 	return (0);
 }
